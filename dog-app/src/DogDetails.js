@@ -6,7 +6,7 @@ function DogDetails({dog}) {
   if (!dog) return <Redirect to="/dogs" />
 
   return (
-    <div classname="row DogDetails">
+    <div className="row DogDetails">
       <div className="col d-flex flex-column align-items-center">
         <img src={dog.src} alt={dog.name} />
         <h2>{dog.name}</h2>
