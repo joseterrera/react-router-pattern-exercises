@@ -23,5 +23,16 @@ User Stories
 5. As a user, if I try to navigate to a color page that does not exist (eg, /colors/blargh), I am redirected to the colors index page.
 6. As a user, if I try to navigate to an invalid url (eg, /this-is-not-valid), I am redirected to the colors index page.
 
+#### Calculator
 
+A calculator app using react router:
 
+Routes:
+1. /add/1/2:
+should render a component that displays 3.
+2. /subtract/3/2:
+should render a component that displays 1.
+3. /multiply/6/4:
+should render a component that displays 24.
+4. /divide/20/5:
+should render a component that displays 4.
