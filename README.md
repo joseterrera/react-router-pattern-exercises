@@ -11,6 +11,9 @@ Components:
 
  FilterDogDetails is a component that takes in an object containing the details for all the dogs and will render the DogDetails of only the "current dog" or the dog that's been selected. Otherwise, if no dog is selected, it won't render anything at all.
 
+ To run tests: `npm run test`
+ On the tests, we use "i" for pattern matching in strings. The "i" is a flag that allows for the text to be matched in a case-insensitive way. Because of this flag allows for case-insensitive pattern matching, "hello world" would match to "Hello World", "HELLO WORLD" or any variant in between. So the test is looking for any case insensitive variation of a dog fact. [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
+
 
 #### Color Factory:
 An app using react router that allows you to view colors and add new colors.
