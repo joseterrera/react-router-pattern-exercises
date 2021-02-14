@@ -7,21 +7,21 @@ import Color from "./Color";
 
 
 function Routes() {
+
   const initialColors = JSON.parse(localStorage.getItem("colors")) || {
-    red: "FF0000",
-    green: "00FF00",
+    red: "#FF0000",
+    green: "#00FF00",
     blue: "#0000FF"
   };
-
   const [colors, updateColors] = useState(initialColors);
 
   useEffect(
-    () => localStorage.setItem("colors", JSON.stringify(colors)), [colors]
+    () => localStorage.setItem("colors", JSON.stringify(colors)),
+    [colors]
   );
 
   function handleAdd(newColorObj) {
-    updateColors(prevColors => ( {
-      ...prevColors, ...newColorObj }));
+    updateColors(prevColors => ({ ...prevColors, ...newColorObj }));
   }
 
   function renderCurrentColor(props) {
@@ -31,18 +31,18 @@ function Routes() {
   };
 
   return (
-   <BrowserRouter>
-    <Switch>
-      <Route exact path="/colors">
-        <ColorList colors={colors} />
-      </Route>
-      <Route exact path="/colors/new">
-        <NewColorForm addColor={handleAdd} />
-      </Route>
-      <Route path="/colors/:color" render={renderCurrentColor} />
-      <Redirect to="/colors" />
-    </Switch>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/colors">
+          <ColorList colors={colors} />
+        </Route>
+        <Route exact path="/colors/new">
+          <NewColorForm addColor={handleAdd} />
+        </Route>
+        <Route path="/colors/:color" render={renderCurrentColor} />
+        <Redirect to="/colors" />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
