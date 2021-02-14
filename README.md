@@ -1,4 +1,4 @@
-### Two react apps:
+### Three react apps:
 #### Dog Finder:
 Dog finder routes to different dogs and displays information on that dog when you’re at that route.
 
